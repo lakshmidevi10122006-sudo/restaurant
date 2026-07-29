@@ -1,0 +1,2182 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: rgb(212, 152, 79);
+
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 30%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.04), transparent 35%),
+                linear-gradient(135deg, #000000, #111111, #1a1a1a, #000000);
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: "Playfair Display", serif;
+             padding:20px;
+        }
+
+        .arrow {
+            position: absolute;
+            padding-top: 30px;
+        }
+
+        .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .navbar {
+            padding-left: 100px;
+        }
+
+        .button {
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 10px;
+            height: 50px;
+            width: 150px;
+            background-color: rgb(168, 113, 45);
+            padding: 10px;
+            color: rgb(242, 247, 247);
+        }
+
+        .menu-section {
+            display: none;
+        }
+
+        .menu-section>h3 {
+            text-align: center;
+            width: 100%;
+            margin: 30px 0;
+            font-size: 35px;
+        }
+
+        .form-control {
+            margin-left: 20px;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .topic {
+            text-align: center;
+            color: rgb(212, 152, 79);
+        }
+
+        #starters {
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%; 
+            padding:10px;
+        }
+
+        .nonveg,
+        .veg {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .nonveg h3,
+        .veg h3 {
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .button1 {
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 10px;
+            height: 60px;
+            width: 120px;
+            border: 2px solid rgb(184, 134, 27);
+            background-color: transparent;
+            padding: 10px;
+
+        }
+
+        .category {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+            text-align: center;
+            padding-left: 30px;
+
+        }
+
+        .menu-section h3 {
+            text-align: center;
+            width: 100%;
+            margin: 20px 0;
+            color: rgb(212, 152, 79);
+        }
+
+
+        .nonveg {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+        
+        }
+
+        .veg {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+          
+        }
+
+        .card {
+            width: 15rem;
+            height: 300px;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        #break-fast {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            padding: 10px;
+        }
+
+        #fried-rice {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            padding: 10px;
+
+        
+        }
+
+        #biriyani {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            padding: 10px;
+
+         
+        }
+
+        #gravy {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            padding: 10px;
+
+         
+        }
+
+        #indian-bread {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            padding: 10px;
+          
+        }
+
+        #rice {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            padding: 10px;
+           
+        }
+
+        #break-fast {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            padding: 10px;
+            
+        }
+
+        #pizza {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            padding: 10px;
+            
+        }
+
+        #noodles {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            
+        }
+
+        #burger {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+         
+        }
+
+        #sandwich {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+         
+        }
+
+        #pasta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+          
+        }
+
+        #salad {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+    
+        }
+
+        #desserts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+       
+        }
+
+        #icecream {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+           
+        }
+
+        #beverages {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+          
+        }
+    </style>
+
+<body>
+    <nav>
+        <a href="/index" class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+        </a>
+        <div class="container-fluid">
+
+            <h1 class="navbar">MENU</h1>
+            <div class="right">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                <a href="tablebooking.html" class="button">BOOK TABLE</a>
+            </div>
+        </div>
+    </nav><br>
+
+    <h2 class="topic">✦ OUR MENU CATEGORY ✦</h2><br><br>
+
+    <div class="category">
+        <button class="button1" onclick="showSection('starters')">STARTERS</button>
+        <button class="button1" onclick="showSection('break-fast')">BREAKFAST</button>
+        <button class="button1" onclick="showSection('fried-rice')">FRIED-RICE</button>
+        <button class="button1" onclick="showSection('biriyani')">BIRIYANI</button>
+        <button class="button1" onclick="showSection('gravy')">GRAVY</button>
+        <button class="button1" onclick="showSection('indian-bread')">INDIAN BREAD</button>
+        <button class="button1" onclick="showSection('rice')">RICE</button>
+        <button class="button1" onclick="showSection('pizza')">PIZZA</button>
+        <button class="button1" onclick="showSection('noodles')">NOODLES </button>
+        <button class="button1" onclick="showSection('burger')">BURGERS</button>
+        <button class="button1" onclick="showSection('sandwich')">SANDWICH</button>
+        <button class="button1" onclick="showSection('pasta')">PASTA</button>
+        <button class="button1" onclick="showSection('salad')">SALADS</button>
+        <button class="button1" onclick="showSection('desserts')">DESSERTS</button>
+        <button class="button1" onclick="showSection('beverages')">BEVERAGES</button>
+        <button class="button1" onclick="showSection('icecream')">ICE CREAM</button>
+    </div>
+    <br><br>
+    <div id="starters" class="menu-section">
+        <h3>STARTERS</h3>
+        <div class="nonveg">
+            <h3>Nonveg</h3>
+            <div class="card">
+                <img src="{{ url_for('static', filename='chicken65 starter.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">chicken 65</h5>
+                    <p>Rs.229</p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='chicken lollipop starter.jpg') }}" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken lollipop</h5>
+                    <p>Rs.249</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='chicken wings.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken wings</h5>
+                    <p>Rs.259</p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='crispy-chicken-popcorn starter.avif') }}" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Crispy chicken popcorn</h5>
+                    <p>Rs.199</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='chilli chicken starter.avif') }}" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Chilli chicken</h5>
+                    <p>Rs.259</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='Fish-Fingers_8.webp') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Fish fingers</h5>
+                    <p>Rs.159</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='fish fry.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Fish fry</h5>
+                    <p>Rs.159</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='prawn fry.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Prawn fry</h5>
+                    <p>Rs.199</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='chicken tandoori.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken tandoori</h5>
+                    <p>Rs.299</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='chicken soup.jpeg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken soup</h5>
+                    <p>Rs.159</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='chicken hot & sour soap.jpg') }}" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hot & sour soup</h5>
+                    <p>Rs.199</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='mutton soup.avif') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mutton soup</h5>
+                    <p>Rs.169</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="veg">
+            <h3>Veg</h3>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='paneer tikka.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Paneer tikka</h5>
+                    <p>Rs.129</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='chilli paneer.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Chilli paneer</h5>
+                    <p>Rs.159</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='Gobi-Manchurian.avif') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Gobi-Manchurian</h5>
+                    <p>Rs.109</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='crisp-corn.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Crispy corn</h5>
+                    <p>Rs.99</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='veg spring rolls.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Veg spring rolls</h5>
+                    <p>Rs.109</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='crispy baby corn.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Crisp baby corn</h5>
+                    <p>Rs.199</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='french fry.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">French fry</h5>
+                    <p>Rs.149</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='cheese ball.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cheese ball</h5>
+                    <p>Rs.199</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='garlic-bread-with-cheese-500x500.jpg') }}" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Garlic bread</h5>
+                    <p>Rs.149</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='tomato soup.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Tomato soup</h5>
+                    <p>Rs.99</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='corn soup.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Corn soup</h5>
+                    <p>Rs.109</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='mushroom soup.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mushroom soup</h5>
+                    <p>Rs.109</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="break-fast" class="menu-section">
+        <h3>MAIN COURSE</h3>
+        <h3>Breakfast</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='idly-mb.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Idli</h5>
+                <p>Rs.40</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='mini idli.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mini idli</h5>
+                <p>Rs.60</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='ghee podi idli.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ghee podi idli</h5>
+                <p>Rs.70</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='sambar idli.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Sambar idli</h5>
+                <p>Rs.70</p>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='plain dosa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Plain dosa</h5>
+                <p>Rs.50</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='ghee podi dosa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ghee podi dosa</h5>
+                <p>Rs.60</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='masala dosa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Masala dosa</h5>
+                <p>Rs.50</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='onion dosa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Onion dosa</h5>
+                <p>Rs.40</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='rava dosa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rava dosa</h5>
+                <p>Rs.40</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paper roast.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Paper roast</h5>
+                <p>Rs.50</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='podi dosa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Podi dosa</h5>
+                <p>Rs.60</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cheese dosa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cheese dosa</h5>
+                <p>Rs.70</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='uttapam.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Uttapam</h5>
+                <p>Rs.45</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='pongal.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pongal</h5>
+                <p>Rs.50</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='poori.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Poori</h5>
+                <p>Rs.50</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chapati-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chapati</h5>
+                <p>Rs.45</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='puttu.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Puttu</h5>
+                <p>Rs.70</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='masala vada.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Masala vada</h5>
+                <p>Rs.20</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='medu vada.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Medu vada</h5>
+                <p>Rs.20</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='upma.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Upma</h5>
+                <p>Rs.50</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="fried-rice" class="menu-section">
+
+        <h3>Fried rice</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mushroom fried rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mushroom fried rice</h5>
+                <p>Rs.209</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer fried rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Paneer fried rice</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken fried rice-m.avif') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken fried rice</h5>
+                <p>Rs.249</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='egg fried rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Egg fried rice</h5>
+                <p>Rs.119</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='schezwan veg rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Schezwan veg rice</h5>
+                <p>Rs.209</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='schezwan chicken rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Schezwan chicken rice</h5>
+                <p>Rs.249</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mixed fried rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mixed fried rice</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='gobi fried rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Gobi fried rice</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="biriyani" class="menu-section">
+        <h3>Biriyani</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='biriyani.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">BIRIYANI</h5>
+                <p>Rs.280</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='veg biriyani-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Veg biriyani</h5>
+                <p>Rs.180</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken-biryani-m.webp') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken biriyani </h5>
+                <p>Rs.259</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken dum biriyani-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken dum biriyani</h5>
+                <p>Rs.279</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mutton biriyani-m.avif') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mutton biriyani</h5>
+                <p>Rs.299</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer biriyani-m.avif') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Paneer biriyani</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='fish biriyani-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Fish biriyani</h5>
+                <p>Rs.269</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='ambur biriyani-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ambur biriyani</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="gravy" class="menu-section">
+        <h3>Gravy</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='butter chicken-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Butter chicken</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken curry-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken curry</h5>
+                <p>Rs.209</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken chettinad-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken chettinad</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='kadai chicken-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Kadai chicken</h5>
+                <p>Rs.239</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken masala-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken masala</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='pepper chicken-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pepper chicken</h5>
+                <p>Rs.239</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mutton curry-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mutton curry</h5>
+                <p>Rs.299</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mutton rogan josh-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mutton rogan</h5>
+                <p>Rs.309</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='fish curry-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Fish curry</h5>
+                <p>Rs.289</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='fish masala-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Fish masala</h5>
+                <p>Rs.299</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='crab gravy-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Crab gravy</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='prawn masala-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Prawn masala</h5>
+                <p>Rs.309</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='egg curry-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Egg curry</h5>
+                <p>Rs.209</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer butter masala-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Paneer butter masala</h5>
+                <p>Rs.239</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='kadai paneer-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Kadai paneer</h5>
+                <p>Rs.249</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='palak paneer.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Palak paneer</h5>
+                <p>Rs.249</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='palak tikka masala-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Palak tikka masala</h5>
+                <p>Rs.259</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='veg kadai-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Veg kadai</h5>
+                <p>Rs.209</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mushroom masala-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mushroom masala</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='dal tadka-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Dal tadka</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='dal fry-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Dal fry</h5>
+                <p>Rs.189</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chana masala-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chana masala</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='aloo gobi-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Aloo gobi</h5>
+                <p>Rs.189</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='malai kofta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Malai kofta</h5>
+                <p>Rs.209</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="indian-bread" class="menu-section">
+        <h3>Indian bread</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chapati-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chapati</h5>
+                <p>Rs.25</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='ceylon parotta-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ceylon parotta</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='butter naan-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Butter naan</h5>
+                <p>Rs.45</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='plain naan-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Plain naan</h5>
+                <p>Rs.35</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='garlic naan-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Garlic naan</h5>
+                <p>Rs.55</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cheese naan-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cheese naan</h5>
+                <p>Rs.55</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='butter roti-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Butter roti</h5>
+                <p>Rs.40</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='tandoori roti -m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Tandoori roti</h5>
+                <p>Rs.35</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='lachcha paratha-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lachcha paratha</h5>
+                <p>Rs.45</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='stuffed kulcha-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Stuffed kulcha</h5>
+                <p>Rs.45</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='parotta-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Parotta</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='chilli parotta-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chilli parotta</h5>
+                <p>Rs.45</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="rice" class="menu-section">
+        <h3>Rice</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='steamed rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Steamed rice</h5>
+                <p>Rs.99</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='jeera rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Jeera rice</h5>
+                <p>Rs.109</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='ghee rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ghee rice</h5>
+                <p>Rs.119</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='keema rice-m.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Keema rice</h5>
+                <p>Rs.219</p>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+    <div id="pizza" class="menu-section">
+
+        <h3>PIZZA AND NOODLES</h3><br>
+        <h3>Pizza</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='margherita pizza.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Margherita pizza</h5>
+                <p>Rs.219</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='farm fresh pizza.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Farm fresh pizza</h5>
+                <p>Rs.299</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='veg supreme pizza.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Veg supreme pizza</h5>
+                <p>Rs.319</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer tikka pizza.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Paneer tikka pizza</h5>
+                <p>Rs.329</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cheese burst pizza.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cheese burst pizza</h5>
+                <p>Rs.349</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='pepperoni pizza.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pepperoni pizza</h5>
+                <p>Rs.339</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken tikka pizza.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken tikka pizza</h5>
+                <p>Rs.349</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='peri peri chicken pizza.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Keema rice</h5>
+                <p>Rs.359</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="noodles" class="menu-section">
+        <h3>Noodles</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='veg hakka noodles.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Veg hakka noodles</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='schezwan veg noodles.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Schezwan veg noodles</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer noodles.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Paneer noodles</h5>
+                <p>Rs.219</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mushroom noodles.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mushroom noodles</h5>
+                <p>Rs.219</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='egg noodles.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Egg noodles</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken hakka noodles.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken hakka noodles</h5>
+                <p>Rs.219</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken schezwan noodles.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken schezwan noodles</h5>
+                <p>Rs.249</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='prawn noodles.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Prawn noodles</h5>
+                <p>Rs.269</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="burger" class="menu-section">
+        <h3>Burgers</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='veg burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Veg burger</h5>
+                <p>Rs.129</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='Aloo tikki burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Aloo tikki burger</h5>
+                <p>Rs.139</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cheese burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cheese burger</h5>
+                <p>Rs.159</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='crispy veg burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Crispy veg burger</h5>
+                <p>Rs.169</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Paneer burger</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mushroom burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mushroom burger</h5>
+                <p>Rs.189</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken burger</h5>
+                <p>Rs.219</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='crispy chicken burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Crispy chicken burger</h5>
+                <p>Rs.239</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='grilled chicken burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Grilled chicken burger</h5>
+                <p>Rs.259</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='double chicken burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Grilled chicken burger</h5>
+                <p>Rs.259</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='bbq chicken burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">BBQ chicken burger</h5>
+                <p>Rs.279</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='peri peri chicken burger.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Peri peri chicken burger</h5>
+                <p>Rs.289</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="sandwich" class="menu-section">
+        <h3>Sandwich</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='veg sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Veg sandwich</h5>
+                <p>Rs.119</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='grilled veg sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Grilled veg sandwich</h5>
+                <p>Rs.149</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cheese sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Cheese sandwich</h5>
+                <p>Rs.149</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='veg club sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Veg club sandwich</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer tikka sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Paneer tikka sandwich</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='corn cheese sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Corn cheese sandwich</h5>
+                <p>Rs.189</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mushroom sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Mushroom sandwich</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Chicken sandwich</h5>
+                <p>Rs.219</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='grilled chicken sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Grilled chicken sandwich</h5>
+                <p>Rs.249</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken club sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Chicken club sandwich</h5>
+                <p>Rs.269</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='bbq chicken sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> BBQ Chicken sandwich</h5>
+                <p>Rs.279</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='egg sandwich.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Egg sandwich</h5>
+                <p>Rs.159</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="pasta" class="menu-section">
+        <h3>Pasta</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='aglio e olio pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Aglio e olio pasta</h5>
+                <p>Rs.229</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='arrabbiata pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Arrabbiata pasta</h5>
+                <p>Rs.249</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='alfredo pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Alfredo pasta</h5>
+                <p>Rs.269</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='pink sauce pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pink sauce pasta</h5>
+                <p>Rs.279</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='pesto pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Pesto pasta</h5>
+                <p>Rs.299</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='veg cheese pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Veg cheese pasta</h5>
+                <p>Rs.299</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='mushroom alfredo pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mushroom alfredo pasta</h5>
+                <p>Rs.319</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer alfredo pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Paneer alfredo pasta</h5>
+                <p>Rs.329</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken arrabbiata pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken arrabbiata pasta</h5>
+                <p>Rs.349</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken alfredo pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken alfredo pasta</h5>
+                <p>Rs.359</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='chicken pink sauce pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicken pink sauce pasta</h5>
+                <p>Rs.369</p>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='prawn alfredo pasta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Prawn alfredo pasta</h5>
+                <p>Rs.379</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="salad" class="menu-section">
+        <h3>Salad</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='Green garden salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Green garden salad</h5>
+                <p>Rs.149</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cucumber & tomato salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Cucumber & tomato salad</h5>
+                <p>Rs.139</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='russian salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Russian salad</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='coleslaw salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Coleslaw salad</h5>
+                <p>Rs.169</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='corn & cheese salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Corn & cheese salad</h5>
+                <p>Rs.189</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='Greek salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Greek salad</h5>
+                <p>Rs.219</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='paneer tikka salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Paneer tikka salad</h5>
+                <p>Rs.249</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='caesar salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Caesar salad</h5>
+                <p>Rs.239</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='caesar salad chicken.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Caesar chicken salad</h5>
+                <p>Rs.289</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='grilled chicken salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Grilled chicken salad</h5>
+                <p>Rs.319</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='prawn salad.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Prawn salad</h5>
+                <p>Rs.359</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='fruit salad.webp') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Fruit salad</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="desserts" class="menu-section">
+        <h3>Desserts</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='gulab jamun.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Gulab jamun</h5>
+                <p>Rs.99</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='gajar halwa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Gajar halwa</h5>
+                <p>Rs.129</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='halwa.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Halwa</h5>
+                <p>Rs.109</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='kesari.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Kesari</h5>
+                <p>Rs.109</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chocolate cake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chocolate cake</h5>
+                <p>Rs.99</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chocolate lava cake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chocolate lava cake</h5>
+                <p>Rs.159</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cheese cake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cheese cake</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chocolate truffle cake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chocolate truffle cake</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='red velvet cake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Red velvet cake</h5>
+                <p>Rs.169</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='tiramisu.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Tiramisu</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='fruit custard.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Fruit custard</h5>
+                <p>Rs.139</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='caramel pudding.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Caramel pudding</h5>
+                <p>Rs.159</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='vanilla panna cotta.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Vanilla panna cotta</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mango mousse.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mango mousse</h5>
+                <p>Rs.199</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chocolate mousse.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chocolate mousse</h5>
+                <p>Rs.209</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='falooda.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Falooda</h5>
+                <p>Rs.159</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="icecream" class="menu-section">
+
+        <h3>Ice cream</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='vanilla ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Vanilla icecream</h5>
+                <p>Rs.99</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chocolate ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chocolate icecream</h5>
+                <p>Rs.109</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='strawberry ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Strawberry icecream</h5>
+                <p>Rs.109</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='butterscotch ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Butterscotch icecream</h5>
+                <p>Rs.119</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='black-currant-ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Black current icecream</h5>
+                <p>Rs.129</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mango ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mango icecream</h5>
+                <p>Rs.109</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='pista ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pista icecream</h5>
+                <p>Rs.119</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='kesar kulfi.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Kesar kulfi</h5>
+                <p>Rs.109</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='brownie with ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Brownie with ice craem</h5>
+                <p>Rs.129</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='hot chocolate fudge sundae.jpg') }}" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Hot chocolate fudge sundae</h5>
+                <p>Rs.169</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='fruit sundae.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Fruit sundae</h5>
+                <p>Rs.159</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='oreo sundae.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Oreo sundae</h5>
+                <p>Rs.179</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cassata ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cassata ice cream</h5>
+                <p>Rs.119</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='triple scoop ice cream.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Triple scoop icecream</h5>
+                <p>Rs.159</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='mango kulfi.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mango kulfi</h5>
+                <p>Rs.129</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chocolate kulfi.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chocolate kulfi</h5>
+                <p>Rs.129</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="beverages" class="menu-section">
+        <h3>Beverages</h3>
+        <div class="card">
+            <img src="{{ url_for('static', filename='sweet lime soda.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Sweet lime soda</h5>
+                <p>Rs.50</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='lime juice.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lime juice</h5>
+                <p>Rs.60</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='iced tea.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Iced tea</h5>
+                <p>Rs.59</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='cold coffee.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cold coffee</h5>
+                <p>Rs.59</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='classic milkshake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Classic milkshake</h5>
+                <p>Rs.109</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='chocolate milkshake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chocolate milkshake</h5>
+                <p>Rs.129</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='oreo milkshake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Oreo milkshake</h5>
+                <p>Rs.169</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='strawberry milkshake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Strawberry milkshake</h5>
+                <p>Rs.159</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='vanilla milkshake.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Vanilla milkshake</h5>
+                <p>Rs.149</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='orange juice.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Orange juice</h5>
+                <p>Rs.59</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='watermelon juice.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Watermelon juice</h5>
+                <p>Rs.59</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='pineapple juice.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pineapple juice</h5>
+                <p>Rs.69</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='lassi.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lassi</h5>
+                <p>Rs.49</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='tea.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Tea</h5>
+                <p>Rs.29</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='filter coffee.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Filter coffee</h5>
+                <p>Rs.39</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='hot chocolate.jpg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Hot chocolate</h5>
+                <p>Rs.129</p>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function showSection(id) {
+
+            let sections = document.querySelectorAll(".menu-section");
+            sections.forEach(function (section) {
+                section.style.display = "none";
+            });
+
+
+            document.getElementById(id).style.display = "flex";
+        }
+        window.onload = function () {
+            showSection("starters");
+    
+        };
+    </script>
+</body>
+
+</html>

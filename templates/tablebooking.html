@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: rgb(212, 152, 79);
+
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 30%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.04), transparent 35%),
+                linear-gradient(135deg, #000000, #111111, #1a1a1a, #000000);
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: "Playfair Display", serif;
+
+        }
+
+        .border {
+            margin: 20px;
+            border: 2px solid rgb(178, 144, 31);
+            margin-bottom: 10px;
+        }
+
+        .arrow {
+            position: absolute;
+
+        }
+
+        h2,
+        p {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .row1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            width: 180px;
+            text-align: center;
+        }
+
+        .row1 input {
+            background: transparent;
+            width: 300px;
+            padding: 10px;
+        }
+
+        .row1 textarea {
+            background: transparent;
+            width: 300px;
+            padding: 10px;
+        }
+
+        button {
+            background-color: rgb(168, 113, 45);
+            padding: 10px;
+            color: rgb(242, 247, 247);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="border">
+        <a href="/index" class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>
+        </a>
+        <form action="/tablebooking" method="POST">
+            <h2>RESERVE YOUR TABLE</h2>
+            <p>✦═════════════════ ✦Good food bring people together✦ ═════════════════✦</p>
+            <p>✦═════════════════✦Reserve your table and make every moment Special✦═════════════════✦</p><br><br>
+
+            <div class="row1">
+                <label>Full Name:</label>
+                <input type="text" name="name" placeholder=" 👤Full Name"><br>
+            </div>
+            <div class="row1">
+                <label>Email:</label>
+                <input type="text" name="emailid" placeholder="📧Email ID"><br>
+            </div>
+            <div class="row1">
+                <label>Phone Number:</label>
+                <input type="text" name="phonenumber"placeholder="📞Phone Number"><br>
+            </div>
+            <div class="row1">
+                <label>Date:</label>
+                <input type="date"name="date" placeholder="Date"><br>
+            </div>
+            <div class="row1">
+                <label>Time:</label>
+                <input type="Time" name="time"placeholder="Time"><br>
+            </div>
+            <div class="row1">
+                <label>No of Guest:</label>
+                <input type="number" name="noofguest" placeholder="Select guest"><br>
+            </div>
+            <div class="row1">
+                <label>Special Request:</label>
+                <textarea type="text" name="request"placeholder="Any Special Request"></textarea>
+            </div><br>
+            <center><button type="submit">CONFIRM BOOKING</button></center><br>
+    </div>
+    </form>
+</body>
+
+</html>
