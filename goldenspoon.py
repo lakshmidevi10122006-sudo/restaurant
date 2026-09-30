@@ -4,11 +4,15 @@ import mysql.connector
 app = Flask(__name__)
 
 # Database Connection
+import mysql.connector
+import os
+
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="goldenspoon"
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME"),
+    port=int(os.getenv("DB_PORT", 3306))
 )
 
 cursor = db.cursor()
@@ -17,48 +21,14 @@ cursor = db.cursor()
 # ---------------- HOME ----------------
 
 @app.route("/")
-def registration():
-    return render_template("registration.html")
+def home():
+    return render_template("index.html")
 
 
 @app.route("/register")
 def register_page():
     return render_template("registration.html")
 
-
-# ---------------- REGISTRATION ----------------
-
-@app.route("/register", methods=["POST"])
-def register():
-
-    name = request.form["name"]
-    email = request.form["email"]
-    password = request.form["password"]
-    reenter = request.form["reenter"]
-
-    if password != reenter:
-        return """
-        <script>
-        alert('Passwords do not match');
-        window.history.back();
-        </script>
-        """
-
-    sql = """
-    INSERT INTO register
-    (NAME, EMAIL, PASSWORD, REENTER_PASSWORD)
-    VALUES (%s,%s,%s,%s)
-    """
-
-    cursor.execute(sql, (name, email, password, reenter))
-    db.commit()
-
-    return """
-    <script>
-    alert('Registration Successful');
-    window.location='/loginpage';
-    </script>
-    """
 
 
 # ---------------- LOGIN PAGE ----------------
@@ -96,6 +66,40 @@ def login():
         window.history.back();
         </script>
         """
+  # ---------------- REGISTRATION ----------------
+
+@app.route("/register", methods=["POST"])
+def register():
+
+    name = request.form["name"]
+    email = request.form["email"]
+    password = request.form["password"]
+    reenter = request.form["reenter"]
+
+    if password != reenter:
+        return """
+        <script>
+        alert('Passwords do not match');
+        window.history.back();
+        </script>
+        """
+
+    sql = """
+    INSERT INTO register
+    (NAME, EMAIL, PASSWORD, REENTER_PASSWORD)
+    VALUES (%s,%s,%s,%s)
+    """
+
+    cursor.execute(sql, (name, email, password, reenter))
+    db.commit()
+
+    return """
+    <script>
+    alert('Registration Successful');
+    window.location='/loginpage';
+    </script>
+    """
+
 
 
 # ---------------- HOME PAGE ----------------
